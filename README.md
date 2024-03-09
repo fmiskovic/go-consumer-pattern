@@ -1,3 +1,3 @@
-# Golang Consumer Pattern
+# Golang Consumer/Client Interface Pattern Example
 
-Example of the cool design pattern
+### This one very cool design pattern
