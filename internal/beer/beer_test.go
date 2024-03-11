@@ -9,9 +9,12 @@ import (
 )
 
 func TestOrder(t *testing.T) {
+	//given
 	barMock := mocks.NewBar(t)
-	barMock.EXPECT().IWantBeer().Return("I want beer")
-
+	expected := "I want beer"
+	barMock.EXPECT().IWantBeer().Return(expected)
+	//when
 	sut := beer.New(barMock)
-	assert.Equal(t, "I want beer", sut.Order())
+	//then
+	assert.Equal(t, expected, sut.Order())
 }
